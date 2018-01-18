@@ -6,7 +6,7 @@ sound = new buzz.sound('https://dl.dropbox.com/s/xhxgeyv8792wv1l/theme.mp3?dl=0'
     formats: ["mp3"],
     preload: true,
     loop: false,
-    autoplay: true,
+    autoplay: false,
     volume: 50
 });
 
@@ -28,15 +28,16 @@ function initAnimation() {
     var windowHeight = window.innerHeight;
     var windowWidth = window.innerWidth;
     
-    // Positions Mario at the bottom of any browser
-    // mario.style.top = (windowHeight - 70) + 'px';
-    
     // Positions Mario on the grass
-    var startPos = mario.style.top = (windowHeight - 124) + 'px';
+//    var startPos = mario.style.top = (windowHeight - ) + 'px';
     
     // Move Mario left from screen to ? Box
     
     var initMoveLeft = mario.style.left = (windowWidth / 2 - 130) + 'px'; 
+    
+    var check = document.addEventListener('mousemove', function(e){
+        console.log("The coordinates: " + e.pageX + " y: " + e.pageY);
+    });
     
 
     var $ = function(query) { return document.querySelectorAll(query)},
@@ -62,20 +63,21 @@ function initAnimation() {
         ease: Linear
     }, 'fade+=0.5')
     
+    
     tl.to($musicIcon, 1, {
         opacity: 1,
         ease: Linear
     }, 'fade+=0.5');
-    
-    /* Mario starts running towards the ? box. */
-    tl.to($mario, 3, {
-        left: initMoveLeft,
-        ease: Sine.easeOut
-    }, 'StartRun-=1');
-    
-    tl.call(function(){
+     tl.call(function(){
         tl.pause();
     });
+  
+    
+    /* Mario starts running towards the ? box. */
+   /* tl.to($mario, 3, {
+        left: initMoveLeft,
+        ease: Sine.easeOut
+    }, 'StartRun+=100');*/
     
     /* Mario jumps up towards the ? box. */
     tl.to($mario, 2, {

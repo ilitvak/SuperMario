@@ -5,7 +5,6 @@
 @import url(https://fonts.googleapis.com/css?family=Exo);
 
 * {
-    position: absolute;
     margin: 0;
     border: 0;
     padding: 0;
@@ -17,7 +16,8 @@
 }
 
 body {
-    overflow: hidden;
+    background: url('images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* -------------------------- */
@@ -33,16 +33,7 @@ body {
     width: 100%;
 }
 
-.background {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-image: url('images/bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+
 
 .musicNotification {
     position: relative;
@@ -97,6 +88,8 @@ body {
 
 
 .mario {
+    position: absolute;
+    top: calc(92% - 68px);
     left: 0;
 }
 

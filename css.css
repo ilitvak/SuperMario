@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Exo);
+
+* {
+    position: absolute;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: all .5s;
+    font-family: 'Exo';
+}
+
+#content {
+    font-size: 25px;
+    color: white;  
+}
+
+.center-content {
+    width: 100%;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.readyPrompt {
+    position: relative;
+    padding-top: 2%;
+    text-align: center;
+    opacity: 0;
+}
+
+.mario {
+    position: absolute;
+    left: 0;
+}
+
+.coin {
+    position: absolute;
+    height: 40px;
+    margin-top: 300px;
+    margin-left: 701px;
+    opacity: 0;
+}
+
+.yoshi {
+  height: 100px;
+  position: absolute;
+  opacity: 0;
+}
+
+
+.bigMario {
+  height: 160px;
+}
+
+.pixelMario1 {
+  position: relative;
+  opacity: 0;
+  height: 83px;
+  top: 99px;
+  left: 160px;
+}
+
+.pixelMario2 {
+  opacity: 0;
+  height: 67px;
+  top: 99px;
+  left: 72px;
+  position: relative;
+}
+
+.pixelMario3 {
+  position: relative;
+  opacity: 0;
+  left: -13px;
+  top: 99px;
+}
+
+.pixelMario4 {
+  position: relative; 
+  opacity: 0;
+  top: 99px;
+  left: -100px;
+}
+
+.part1 {
+  position: relative;
+  opacity: 0;
+  top: 94px;
+  left: 195px;
+  height: 100px;
+}
+
+.part2 {
+  position: relative;
+  opacity: 0;
+  top: 100px;
+  left: -5px;
+  height: 150px;
+}
+
+.part3 {
+  position: relative;
+  opacity: 0;
+  top: -120px;
+  left: 1270px;
+  height: 200px;
+}
+
+.part4 {
+  position: relative;
+  opacity: 0;
+  top: -123px;
+  left: 1045px;
+  height: 220px;
+}
+
+.ending {
+  position: relative;
+  opacity: 0;
+  height: 200px;
+  top: -230px;
+  left: 45px;
+}

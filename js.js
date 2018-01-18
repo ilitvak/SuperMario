@@ -26,18 +26,19 @@ function initAnimation() {
     
     var mario = document.querySelector('.mario');
     var windowHeight = window.innerHeight;
+    var windowWidth = window.innerWidth;
     
     // Positions Mario at the bottom of any browser
     // mario.style.top = (windowHeight - 70) + 'px';
     
     // Positions Mario on the grass
-    mario.style.top = (windowHeight - 124) + 'px';
+    var startPos = mario.style.top = (windowHeight - 124) + 'px';
     
-//    setTimeout(function(){
-//        var text = document.querySelector('.readyPrompt');
-//        text.textContent = "Pause Music";
-//    }, 5000);
-//    
+    // Move Mario left from screen to ? Box
+    
+    var initMoveLeft = mario.style.left = (windowWidth / 2 - 130) + 'px'; 
+    
+
     var $ = function(query) { return document.querySelectorAll(query)},
     
         $mario = $(".mario"),
@@ -68,7 +69,7 @@ function initAnimation() {
     
     /* Mario starts running towards the ? box. */
     tl.to($mario, 3, {
-        left: 590,
+        left: initMoveLeft,
         ease: Sine.easeOut
     }, 'StartRun-=1');
     

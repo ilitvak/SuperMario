@@ -66,15 +66,15 @@ function initAnimation() {
         ease: Linear
     }, 'fade+=0.5');
     
+    /* Mario starts running towards the ? box. */
+    tl.to($mario, 3, {
+        left: 590,
+        ease: Sine.easeOut
+    }, 'StartRun-=1');
+    
     tl.call(function(){
         tl.pause();
     });
-    
-    
-    /* Mario starts running towards the ? box. */
-    tl.to($mario, .5, {
-        ease: Sine.easeOut
-    }, 'StartRun+=4');
     
     /* Mario jumps up towards the ? box. */
     tl.to($mario, 2, {

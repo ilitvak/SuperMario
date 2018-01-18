@@ -2,7 +2,6 @@
 /* Import Super Mario Song */
 /* --------------------------- */
 
-
 sound = new buzz.sound('https://dl.dropbox.com/s/xhxgeyv8792wv1l/theme.mp3?dl=0', {
     formats: ["mp3"],
     preload: true,
@@ -10,7 +9,6 @@ sound = new buzz.sound('https://dl.dropbox.com/s/xhxgeyv8792wv1l/theme.mp3?dl=0'
     autoplay: true,
     volume: 50
 });
-
 
 /* --------------------------- */
 /* Toggles Super Mario Song */
@@ -24,17 +22,6 @@ function toggleMusic() {
 
 musicIcon.addEventListener("click", toggleMusic);
 
-//$(document).ready(function(){
-//    $(window).scroll (function () {
-//        if ($(window).scrollTop() > 1) {
-//    	   sound.play();
-//        }
-//        else {
-//            sound.pause();
-//        }
-//	});
-//}); 
-
 function initAnimation() {
     
     var mario = document.querySelector('.mario');
@@ -46,11 +33,16 @@ function initAnimation() {
     // Positions Mario on the grass
     mario.style.top = (windowHeight - 124) + 'px';
     
+//    setTimeout(function(){
+//        var text = document.querySelector('.readyPrompt');
+//        text.textContent = "Pause Music";
+//    }, 5000);
+//    
     var $ = function(query) { return document.querySelectorAll(query)},
     
         $mario = $(".mario"),
         $coin = $('.coin'),
-        $readyPrompt = $('.readyPrompt'),
+        $readyPrompt = $('.musicNotification'),
         $musicIcon = $('.fa-music'),
         $pixelMario1 = $('.pixelMario1'),
         $pixelMario2 = $('.pixelMario2'),

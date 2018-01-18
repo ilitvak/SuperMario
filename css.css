@@ -12,6 +12,10 @@
     font-family: 'Exo';
 }
 
+body {
+    overflow: hidden;
+}
+
 #content {
     font-size: 25px;
     color: white;  
@@ -36,20 +40,26 @@
     position: relative;
     padding-top: 2%;
     text-align: center;
-}
-
-.readyPrompt {
-    display: inline-block;
-    position: relative;
-    margin-right: 10px;
     opacity: 0;
 }
 
 .fa-music {
+    position: relative;
     font-size: 1.2em;
     cursor: pointer;
     opacity: 0;
     outline: 0;
+}
+
+.musicNotification::before {
+    content: "Turn On Your Sound!";
+    font-family: Arial;
+    text-align: center;
+    color: #fff;
+}
+
+.musicNotification:hover.musicNotification::before {
+    content: "Pause Music";
 }
 
 .fa-music:hover, .fa-music:active,.fa-music:focus {

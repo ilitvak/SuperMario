@@ -15,11 +15,6 @@
     font-family: 'Exo';
 }
 
-body {
-    background: url('images/bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
 /* -------------------------- */
 /* Content */
 /* -------------------------- */
@@ -33,6 +28,14 @@ body {
     width: 100%;
 }
 
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
 
 
 .musicNotification {

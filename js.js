@@ -7,24 +7,33 @@ sound = new buzz.sound('https://dl.dropbox.com/s/xhxgeyv8792wv1l/theme.mp3?dl=0'
     formats: ["mp3"],
     preload: true,
     loop: false,
-    autoPlay: true
+    autoplay: true,
+    volume: 50
 });
 
 
 /* --------------------------- */
-/* Plays Super Mario Song */
+/* Toggles Super Mario Song */
 /* --------------------------- */
 
-$(document).ready(function(){
-    $(window).scroll (function () {
-        if ($(window).scrollTop() > 1) {
-    	   sound.play();
-        }
-        else {
-            sound.pause();
-        }
-	});
-}); 
+var musicIcon = document.querySelector('.fa-music');
+
+function toggleMusic() {
+    return sound.togglePlay();
+}
+
+musicIcon.addEventListener("click", toggleMusic);
+
+//$(document).ready(function(){
+//    $(window).scroll (function () {
+//        if ($(window).scrollTop() > 1) {
+//    	   sound.play();
+//        }
+//        else {
+//            sound.pause();
+//        }
+//	});
+//}); 
 
 function initAnimation() {
     
@@ -42,6 +51,7 @@ function initAnimation() {
         $mario = $(".mario"),
         $coin = $('.coin'),
         $readyPrompt = $('.readyPrompt'),
+        $musicIcon = $('.fa-music'),
         $pixelMario1 = $('.pixelMario1'),
         $pixelMario2 = $('.pixelMario2'),
         $pixelMario3 = $('.pixelMario3'),
@@ -56,8 +66,13 @@ function initAnimation() {
     
     tl.to($readyPrompt, 1, {
         opacity: 1,
-        ease: Linear,
-    })
+        ease: Linear
+    }, 'fade+=0.5')
+    
+    tl.to($musicIcon, 1, {
+        opacity: 1,
+        ease: Linear
+    }, 'fade+=0.5');
     
     tl.call(function(){
         tl.pause();

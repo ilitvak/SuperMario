@@ -32,11 +32,28 @@
     background-position: center;
 }
 
-.readyPrompt {
+.musicNotification {
     position: relative;
     padding-top: 2%;
     text-align: center;
+}
+
+.readyPrompt {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
     opacity: 0;
+}
+
+.fa-music {
+    font-size: 1.2em;
+    cursor: pointer;
+    opacity: 0;
+    outline: 0;
+}
+
+.fa-music:hover, .fa-music:active,.fa-music:focus {
+    outline: 0;
 }
 
 .mario {
